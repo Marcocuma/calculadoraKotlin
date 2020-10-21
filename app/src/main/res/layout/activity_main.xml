@@ -11,14 +11,38 @@
     <TextView
         android:id="@+id/textView_result"
         android:layout_width="match_parent"
-        android:layout_height="49dp"
+        android:layout_height="0dp"
         android:layout_weight="2"
         android:textColor="#FFFFFF"
-        android:textSize="50sp" />
+        android:textSize="50sp"
+        android:scrollbars = "vertical"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="214dp"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/b_limpiar"
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="#101012"
+            android:tint="#FBFBFB"
+            app:srcCompat="@drawable/escoba" />
+
+        <ImageButton
+            android:id="@+id/b_borrar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            app:srcCompat="@drawable/borrar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="321dp"
         android:layout_weight="2"
         android:orientation="horizontal">
 
@@ -137,56 +161,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/b_a"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:text="A" />
-
-            <Button
-                android:id="@+id/b_b"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:text="B" />
-
-            <Button
-                android:id="@+id/b_c"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:text="C" />
-
-            <Button
-                android:id="@+id/b_d"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:text="D" />
-
-            <Button
-                android:id="@+id/b_e"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:text="E" />
-
-            <Button
-                android:id="@+id/b_f"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:text="F" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="102dp"
+            android:layout_width="107dp"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
@@ -217,62 +192,6 @@
                 android:layout_height="110dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/div" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="128dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/b_borrar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                app:srcCompat="@drawable/borrar" />
-
-            <ImageButton
-                android:id="@+id/b_limpiar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:background="#101012"
-                android:tint="#FBFBFB"
-                app:srcCompat="@drawable/escoba" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="150dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/b_decimal"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="#594B4B"
-                android:text="@string/decimal"
-                android:textColor="#FFFFFF" />
-
-            <Button
-                android:id="@+id/b_binario"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="#2F594B4B"
-                android:text="@string/binario"
-                android:textColor="#FFFFFF" />
-
-            <Button
-                android:id="@+id/b_hexadecimal"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="#2F594B4B"
-                android:text="@string/hexadecimal"
-                android:textColor="#FFFFFF" />
         </LinearLayout>
     </LinearLayout>
 

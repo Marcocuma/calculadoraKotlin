@@ -2,9 +2,11 @@ package com.example.CalculadoraKotlin
 
 import android.content.res.Configuration
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
     private var operador: String = ""
@@ -17,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        textView_result.movementMethod = ScrollingMovementMethod()
         b_0.setOnClickListener(listenerBoton)
         b_1.setOnClickListener(listenerBoton)
         b_2.setOnClickListener(listenerBoton)
@@ -347,7 +350,7 @@ class MainActivity : AppCompatActivity() {
 
     }
     fun anadirPunto(){
-        if(tipoNumero == "decimal") {
+        if(tipoNumero == "decimal" && textView_result.text.isNotEmpty()) {
             var ultimoChar =
                 textView_result.text.toString().get(textView_result.text.toString().length - 1)
             if (!puntoOp1 && !tieneOperador && textView_result.text.isNotEmpty()) {
