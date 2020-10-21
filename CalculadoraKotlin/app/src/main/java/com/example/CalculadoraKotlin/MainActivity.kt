@@ -312,7 +312,20 @@ class MainActivity : AppCompatActivity() {
         puntoOp1 = savedInstanceState.getBoolean("PUNTOOP1")
         puntoOp2 = savedInstanceState.getBoolean("PUNTOOP2")
         tipoNumero = savedInstanceState.getString("TIPONUMERO").toString()
-
+        if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
+            if (!tipoNumero.equals("decimal")){
+                if(textView_result.text.isNotEmpty()) {
+                    if (!tieneOperador) {
+                        textView_result.text = convertirDecimal(textView_result.text.toString())
+                        tipoNumero = "decimal"
+                    } else {
+                        textView_result.text =
+                            convertirDecimal(textView_result.text.split(operador)[0]) + operador +
+                                    convertirDecimal(textView_result.text.split(operador)[1])
+                    }
+                }
+            }
+        }
     }
     fun anadirOperador(op : String){
         var excepciones : String = "+-*/."
