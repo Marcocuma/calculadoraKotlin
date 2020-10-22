@@ -4,6 +4,7 @@ import android.content.res.Configuration
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -386,7 +387,16 @@ class MainActivity : AppCompatActivity() {
             tieneOperador = false
             b_igual.isEnabled = false
             puntoOp2 = false
-            textView_result.text = result.toString()
+            println(result.toString())
+            if (!result.toString().equals("Infinity"))
+                textView_result.text = result.toString()
+            else{
+                Toast.makeText(this,"No se puede dividir entre 0",Toast.LENGTH_LONG).show()
+                textView_result.text = ""
+                puntoOp1 = false
+                puntoOp2 = false
+                tieneOperador = false
+            }
         }else{
             calcularNoDecimal()
         }

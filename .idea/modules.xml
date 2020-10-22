@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/EventosKotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/EventosKotlin.iml" group="EventosKotlin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EventosKotlin-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EventosKotlin-app.iml" group="EventosKotlin/app" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="EventosKotlin/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/calculadoraKotlin-EventosKotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/calculadoraKotlin-EventosKotlin.iml" group="EventosKotlin" />
     </modules>
   </component>
 </project>
